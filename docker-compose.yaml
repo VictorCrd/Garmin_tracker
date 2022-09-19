@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  garmin-tracker:
+    build: .
+    ports:
+      - 127.0.0.1:8888:8888
+    volumes:
+      - .:/home/jovyan
+    container_name:   garmin-tracker-container
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
